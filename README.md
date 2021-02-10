@@ -16,3 +16,5 @@ insert into emp(eid,ename,esal) values(110,'charan4',50000);
 
 
 select * from emp
+
+select * from emp where eid='102'
