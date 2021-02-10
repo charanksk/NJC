@@ -11,6 +11,7 @@ import java.sql.Statement;
 public class JDBCExample {
 	public static Statement stmt = null;
 	
+	//Insert records into EMP table
 	public static void InsertData(int eid, String ename, int esal) {
 		try {
 			
@@ -27,6 +28,7 @@ public class JDBCExample {
 		}	
 	}
 	
+	// Retrieve EMP records from DB 
 	public static void RetriveData(int eid) {
 		try {
 			
@@ -58,6 +60,7 @@ public class JDBCExample {
     	Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "skc", "skc");	
 		stmt = conn.createStatement();
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            //Select an option to perform operation
             System.out.println("Enter the Operation to Perform: 1. Insert  2. Retrive \n");
             int option = Integer.parseInt(br.readLine());
             switch(option){
